@@ -360,6 +360,10 @@ section {
   margin-bottom: 0;
 }
 
+.about .yellow-button {
+  margin-top: 50px;
+}
+
 /*--------------------------------------------------------------
 # Facts
 --------------------------------------------------------------*/
@@ -1006,7 +1010,20 @@ section {
   background: #37b3ed;
 }
 
+.yellow-button {
+  background: #feb34d;
+  border: 0;
+  padding: 10px 24px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 4px;
+  display: inline-block;
+}
 
+.yellow-button:hover {
+  background: #b27d36;
+  color: #fff;
+}
 
 @-webkit-keyframes animate-loading {
   0% {
