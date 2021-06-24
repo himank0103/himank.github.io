@@ -213,8 +213,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   height: 100vh;
   background: url("../img/hero-bg.jpg") top center;
-  background-size: cover;
-  text-indent: -200px;
+  background-size: cover;  
 }
 
 #hero:before {
@@ -232,6 +231,7 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   z-index: 2;
   min-width: 300px;
+  left: -200px;
 }
 
 #hero h1 {
@@ -271,6 +271,17 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 18px;
     line-height: 24px;
     margin-bottom: 30px;
+  }
+  #hero .hero-container {
+    position: relative;
+    z-index: 2;
+    min-width: 300px;
+    left: 0px;
+  }
+  #hero {    
+    background: url("../img/hero-bg.jpg") top center;
+    background-position: -56% 0;
+    background-size: cover;
   }
 }
 
@@ -320,7 +331,7 @@ section {
 .about .content h3 {
   font-weight: 700;
   font-size: 26px;
-  color: #000;
+  color: #000;   
 }
 
 .about .content ul {
@@ -574,7 +585,8 @@ section {
   text-align: center;
   background: rgba(20, 157, 221, 0.75);
   transition: 0.3s;
-  width: 50%;
+  display: block;
+  width: 100%;
 }
 
 .portfolio .portfolio-wrap .portfolio-links a:hover {
@@ -605,8 +617,16 @@ section {
   padding-top: 40px;
 }
 
+.portfolio-details-mobile {
+  text-align: center;
+}
+
 .portfolio-details .portfolio-details-slider img {
   width: 100%;
+}
+
+.portfolio-details-mobile .portfolio-details-slider img {
+  width: auto;
 }
 
 .portfolio-details .portfolio-details-slider .swiper-pagination {
@@ -661,6 +681,7 @@ section {
 
 .portfolio-details .portfolio-description p {
   padding: 0;
+  margin-bottom: 25px;
 }
 
 /*--------------------------------------------------------------
@@ -844,7 +865,7 @@ section {
   padding: 0 0 10px 60px;
   margin-bottom: 20px;
   font-size: 14px;
-  color: #173b6c;
+  color: #000;
 }
 
 .contact .info .email p {
@@ -878,6 +899,15 @@ section {
 .contact .info .email:hover i, .contact .info .address:hover i, .contact .info .phone:hover i {
   background: #feb34d;
   color: #fff;
+}
+
+@media(max-width:768px) {
+  .contact .info .email, .contact .info .address, .contact .info .phone {
+    width: 100%;
+  }
+  .contact .info .d-flex {
+    flex-wrap: wrap;
+  }
 }
 
 .contact .php-email-form {
@@ -963,7 +993,7 @@ section {
   padding: 10px 15px;
 }
 
-.contact .php-email-form button[type="submit"] {
+.contact .php-email-form button[type="submit"], .yellow-button {
   background: #feb34d;
   border: 0;
   padding: 10px 24px;
@@ -975,6 +1005,8 @@ section {
 .contact .php-email-form button[type="submit"]:hover {
   background: #37b3ed;
 }
+
+
 
 @-webkit-keyframes animate-loading {
   0% {
